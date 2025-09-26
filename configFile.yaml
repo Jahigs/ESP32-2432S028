@@ -1,5 +1,5 @@
 substitutions:
-  font_direcotry: "fonts/"
+  font_directory: "fonts/"
   width: 320
   height: 240
   device_name: frame-room-esp
@@ -56,20 +56,20 @@ captive_portal:
 # Create a font to use, add and remove glyphs as needed. 
 font:
   - file:
-      path: ${font_direcotry}Arimo-Regular.ttf  # Path to main font file
+      path: ${font_directory}Arimo-Regular.ttf  # Path to main font file
       type: local
     id: arimo48                                         # ID used to reference this font
     size: 48                                            # Font size
     glyphs:                                             # Characters to include in font. Only 
       - " .,°0123456789CF"                              # add characters you need to reduce memory usage.
   - file:                                               # Giving an ID for a larger size of that font.
-      path: ${font_direcotry}Arimo-Regular.ttf
+      path: ${font_directory}Arimo-Regular.ttf
       type: local
     id: arimo14
     size: 14
     glyphs:
       - "0123456789"
-  - file: ${font_direcotry}materialdesignicons-webfont.ttf         # Defining Material Design Icons as a font. This
+  - file: ${font_directory}materialdesignicons-webfont.ttf         # Defining Material Design Icons as a font. This
     id: mdi_icons                                       # will allow us to use them as button icons.
     size: 48                                            # You can get these glyphs from the https://pictogrammers.com/library/mdi/
     glyphs:                                             # where you choose the icon, and then "copy glyph".
