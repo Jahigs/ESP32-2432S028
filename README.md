@@ -36,7 +36,14 @@ Name: function 1
 On Message tab:
   msg.qty = 1
 msg.qty = msg.payload
-
 msg.url = 'path/to/your/server/.php?json={"printer":"' + msg.printer + '","qty":"' + msg.qty + '","key":"a8371d84f4b28a32ab4b7f8ef5033bec4869090e8fa5caab705a88db10a89c54"}'
 return msg;
-  
+
+DELAY NODE:
+  Action: Rate Limit - All messages
+  Rate: 1 msg(s) per 5 seconds
+  Queue intermediate messages
+
+HTTP REQUEST NODE:
+  Method: GET
+  Payload: Ignore
